@@ -89,7 +89,6 @@ def playGame( showAnswer ):
     print('Okay, I have a number between 1 and ' + str(high))
     print('You have ' + str(totalGuesses) + ' to figure it out')
     
-    
     # TO DO: ####################################################
     # Write code in this function that                          #
     # 1. Greets the user                                        #
@@ -109,7 +108,7 @@ def playGame( showAnswer ):
     #############################################################
 
 
-    # you don't need to change anything below this comment ##############
+  # you don't need to change anything below this comment ##############
     # ///////////////////////////////////////////////////////////////////
     # this if statement allows us to show the hidden number to the user
     if( showAnswer == True ):
