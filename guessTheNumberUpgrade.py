@@ -1,4 +1,4 @@
-# replace the contents of this comment with your name
+#Lara Willson
 import random
 
 # -------------------------------------------------------------------
@@ -6,8 +6,11 @@ import random
 # it has one parameter:
 #   'topLimit' which is the top limit for the random number generator
 # the function returns the random number generated to its caller
-def generateNumber( topLimit ):
-    
+
+def generateNumber( high ):
+     theNumber = random.randint(1, high)
+     return theNumber
+
     # TO DO: ####################################################
     # Write code in this function that calculates and           #
     # returns a random number between 1 and the user's topLimit #
@@ -43,7 +46,16 @@ def askUserToGuess( times, secretNumber ):
 # it has two parameters:
 #   the 'userGuess' parameter is the answer entered by the user
 #   the 'userSecretNumber' parameter is the randomly generated number
+
 def evaluateAnswer( userGuess, userSecretNumber ):
+    if userGuess < userSecretNumber:
+        print('Hmmm, That guess is too low')
+    elif userGuess > userSecretNumber:
+        print('Whoa there, that number is too high')
+    elif userGuess == userSecretNumber:
+        return True
+    
+        
     
     # TO DO: ####################################################
     # Write code in this function that compares userGuess and   #
@@ -65,7 +77,18 @@ def evaluateAnswer( userGuess, userSecretNumber ):
 #   'showAnswer' is a Boolean value, if that Boolean value is:
 #       True, we'll show the right answer on the screen
 #       False, we won't show the right answer on the screen
+
 def playGame( showAnswer ):
+    print('Hey there, lets play a game of numbers my friend.')
+    print('What is the highest number you would like to guess?')
+    print('How about we make this easy and you only enter intergers:')
+    high = int(input())
+    print('Awesome! And how many times will it take you to guess?')
+    totalGuesses = int(input())
+    theNumber = generateNumber(high)
+    print('Okay, I have a number between 1 and ' + str(high))
+    print('You have ' + str(totalGuesses) + ' to figure it out')
+    
     
     # TO DO: ####################################################
     # Write code in this function that                          #
